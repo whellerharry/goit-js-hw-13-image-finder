@@ -17,14 +17,14 @@ export default class ApiService {
     return hits;
   }
 
-  async fetchTotalHits() {
-    const url = `${BASE_URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
+  // async fetchTotalHits() {
+  //   const url = `${BASE_URL}/?image_type=photo&orientation=horizontal&q=${this.searchQuery}&page=${this.page}&per_page=12&key=${API_KEY}`;
 
-    const response = await fetch(url);
-    const images = await response.json();
-    const totalHits = await images.totalHits;
-    return totalHits;
-  }
+  //   const response = await fetch(url);
+  //   const images = await response.json();
+  //   const totalHits = await images.totalHits;
+  //   return totalHits;
+  // }
 
   incrementPage() {
     this.page += 1;
